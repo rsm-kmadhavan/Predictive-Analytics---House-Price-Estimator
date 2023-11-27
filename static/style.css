@@ -1,0 +1,115 @@
+.navbar {
+    overflow: hidden;
+    background-color: #2f2fa2; /* Blue background for navbar */
+    width: 100%; /* Ensure the navbar spans the full width */
+}
+
+/* Navigation bar links */
+.navbar a {
+    display: inline-block; /* Align links horizontally */
+    color: #fff; /* White text for links */
+    text-align: center;
+    padding: 20px 16px; /* Increased padding for bigger navbar */
+    text-decoration: none;
+    font-size: 18px; /* Adjusted font size */
+}
+
+/* Clearfix for the navigation bar */
+.navbar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #f64c72; /* Orange background for hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Style for tab content */
+.tabContent {
+    display: none; /* Hide content by default */
+    padding: 20px;
+    border: 1px solid #2f2fa2; /* Blue border for tab content */
+    border-top: none;
+}
+
+/* Style the container for the content */
+.container {
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff; /* White background for the container */
+    text-align: center;
+}
+
+/* Remove redundant flex display from the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for the body */
+    margin: 0;
+    padding: 0;
+}
+/* General form styling */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 10px; /* Spacing between fields */
+    margin-bottom: 20px;
+  
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 5px; /* Rounded borders for the input fields */
+    font-size: 16px;
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Style the dropdown */
+select {
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+/* Remove the arrows from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+/* Button styling */
+form #estimate_button {
+    grid-column: span 2 !important; /* Make button span two columns */
+    padding: 10px 30px !important; /* Further increased padding for an even bigger button */
+    font-size: 22px !important; /* Larger font size */
+    background-color: #f64c72 !important; /* Orange background */
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease-in-out !important; /* Smooth transform transition */
+    margin: auto !important; /* Center the button */
+}
+
+#estimate_button:hover {
+    transform: scale(1.05) !important; /* Slightly increase size on hover */
+}
+
+/* Estimated price display */
+#estimated_price {
+    font-size: 24px;
+    color: #007bff;
+    margin-top: 20px;
+}
