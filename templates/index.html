@@ -32,66 +32,54 @@
     
                 <label for="mainroad">Location:</label>
                 <select id="mainroad" name="mainroad">
-                    {% set selected_value = form_data.get('mainroad', '1') %}
-                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                    <option value="Yes" {% if form_data.mainroad == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if form_data.mainroad == 'No' %}selected{% endif %}>No</option>
                 </select>
                 <!-- <input type="number" id="mainroad" name="mainroad" placeholder="Is the house on the main road? (yes/no)" value="{{ form_data.get('mainroad', '') }}" required> -->
     
                 <label for="guestroom">Guestroom:</label>
-                <select id="guestroom" name="guestroom">
-                    {% set selected_value = form_data.get('guestroom', '1') %}
-                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
-                </select>
+                <select name="guestroom">
+                    <option value="Yes" {% if form_data.guestroom == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if form_data.guestroom == 'No' %}selected{% endif %}>No</option>
+                  </select>
                 <!-- <input type="number" id="guestroom" name="guestroom" placeholder="Does the house have a guest room? (yes/no): " value="{{ form_data.get('guestroom', '') }}" required> -->
     
                 <label for="basement">Basement:</label>
                 <select id="basement" name="basement">
-                    {% set selected_value = form_data.get('basement', '1') %}
-                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                    <option value="Yes" {% if form_data.basement == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if form_data.basement == 'No' %}selected{% endif %}>No</option>
                 </select>
                 <!-- <input type="number" id="basement" name="basement" placeholder="Does the house have a basement? (yes/no)" value="{{ form_data.get('basement', '') }}" required> -->
     
                 <label for="hotwaterheating">Water Heating:</label>
                 <select id="hotwaterheating" name="hotwaterheating">
-                    {% set selected_value = form_data.get('hotwaterheating', '1') %}
-                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                    <option value="Yes" {% if form_data.hotwaterheating == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if form_data.hotwaterheating == 'No' %}selected{% endif %}>No</option>
                 </select>
                 <!-- <input type="number" id="hotwaterheating" name="hotwaterheating" placeholder="Does the house have hot water heating? (yes/no)" value="{{ form_data.get('hotwaterheating', '') }}" required> -->
     
                 <label for="airconditioning">Air Conditioning:</label>
                 <select id="airconditioning" name="airconditioning">
-                    {% set selected_value = form_data.get('airconditioning', '1') %}
-                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                    <option value="Yes" {% if form_data.airconditioning == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if form_data.airconditioning == 'No' %}selected{% endif %}>No</option>
                 </select>
                 <!-- <input type="number" id="airconditioning" name="airconditioning" placeholder="Does the house have air conditioning? (yes/no)" value="{{ form_data.get('airconditioning', '') }}" required> -->
     
                 <label for="parking">Parking:</label>
-                <!-- <select id="parking" name="parking">
-                    {% set selected_value = form_data.get('parking', '1') %}
-                    <option value="Yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="No" {% if selected_value == 'No' %}selected{% endif %}>No</option>
-                </select> -->
                 <input type="number" id="parking" name="parking" placeholder="Enter the number of parking spaces" value="{{ form_data.get('parking', '') }}" required>
                 
                 <label for="prefarea">Preferred Area:</label>
                 <select id="prefarea" name="prefarea">
-                    {% set selected_value = form_data.get('prefarea', '1') %}
-                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
-                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                    <option value="Yes" {% if form_data.prefarea == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if form_data.prefarea == 'No' %}selected{% endif %}>No</option>
                 </select>
                 <!-- <input type="number" id="prefarea" name="prefarea" placeholder="Is the house in a preferred area? (yes/no)" value="{{ form_data.get('prefarea', '') }}" required> -->
 
                 <label for="furnishingstatus">Furnishing:</label>
                 <select id="furnishingstatus" name="furnishingstatus">
-                    {% set selected_value = form_data.get('furnishingstatus', '1') %}
-                    <option value="furnished" {% if selected_value == 'furnished' %}selected{% endif %}>furnished</option>
-                    <option value="semi-furnished" {% if selected_value == 'semi-furnished' %}selected{% endif %}>semi-furnished</option>
-                    <option value="unfurnished" {% if selected_value == 'unfurnished' %}selected{% endif %}>unfurnished</option>
+                    <option value="furnished" {% if form_data.furnishingstatus == 'furnished' %}selected{% endif %}>Furnished</option>
+                    <option value="semi-furnished" {% if form_data.furnishingstatus == 'semi-furnished' %}selected{% endif %}>Semi-Furnished</option>
+                    <option value="unfurnished" {% if form_data.furnishingstatus == 'unfurnished' %}selected{% endif %}>Unfurnished</option>
                 </select>
                 <!-- <input type="number" id="furnishingstatus" name="furnishingstatus" placeholder="Enter the furnishing status (furnished/semi-furnished/unfurnished)" value="{{ form_data.get('furnishingstatus', '') }}" required> -->
                 
