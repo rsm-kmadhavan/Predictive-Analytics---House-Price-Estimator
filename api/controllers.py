@@ -33,6 +33,7 @@ def calculate_price(form_data):
     })
     try:
         output = model.predict(user_inputs)[0]
+        # print(user_inputs)
         return "${:,.0f}".format(output)
     except:
         return 'There was an error processing your request'
