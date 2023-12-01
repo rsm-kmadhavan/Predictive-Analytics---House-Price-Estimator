@@ -18,40 +18,85 @@
             <h1>House Price Estimator</h1>
             <form action="{{ url_for('url_register.index') }}" method="post">
     
-                <label for="square_footage">Square Footage:</label>
-                <input type="number" id="square_footage" name="square_footage" placeholder="Square Footage" value="{{ form_data.get('square_footage', '') }}" required>
+                <label for="area">Area:</label>
+                <input type="number" id="area" name="area" placeholder="Area Sq. Foot" value="{{ form_data.get('area', '') }}" required>
 
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" id="bedrooms" name="bedrooms" placeholder="Number of Bedrooms" value="{{ form_data.get('bedrooms', '') }}" required>
     
-                <label for="floors">Number of Floors:</label>
-                <input type="number" id="floors" name="floors" placeholder="Number of Floors" value="{{ form_data.get('floors', '') }}" required>
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" id="bathrooms" name="bathrooms" placeholder="Number of Bathrooms" value="{{ form_data.get('bathrooms', '') }}" required>
     
-                <label for="flield1">Number of field1:</label>
-                <input type="number" id="field1" name="field1" placeholder="Field 1" value="{{ form_data.get('field1', '') }}" required>
+                <label for="stories">Stories:</label>
+                <input type="number" id="stories" name="stories" placeholder="Number of Stories" value="{{ form_data.get('stories', '') }}" required>
     
-                <label for="flield2">Number of field2:</label>
-                <input type="number" id="field2" name="field2" placeholder="Field 1" value="{{ form_data.get('field2', '') }}" required>
+                <label for="mainroad">Location:</label>
+                <select id="mainroad" name="mainroad">
+                    {% set selected_value = form_data.get('mainroad', '1') %}
+                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select>
+                <!-- <input type="number" id="mainroad" name="mainroad" placeholder="Is the house on the main road? (yes/no)" value="{{ form_data.get('mainroad', '') }}" required> -->
     
-                <label for="flield3">Number of field3:</label>
-                <input type="number" id="field3" name="field3" placeholder="Field 1" value="{{ form_data.get('field3', '') }}" required>
+                <label for="guestroom">Guestroom:</label>
+                <select id="guestroom" name="guestroom">
+                    {% set selected_value = form_data.get('guestroom', '1') %}
+                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select>
+                <!-- <input type="number" id="guestroom" name="guestroom" placeholder="Does the house have a guest room? (yes/no): " value="{{ form_data.get('guestroom', '') }}" required> -->
     
-                <label for="flield4">Number of field4:</label>
-                <input type="number" id="field4" name="field4" placeholder="Field 1" value="{{ form_data.get('field4', '') }}" required>
+                <label for="basement">Basement:</label>
+                <select id="basement" name="basement">
+                    {% set selected_value = form_data.get('basement', '1') %}
+                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select>
+                <!-- <input type="number" id="basement" name="basement" placeholder="Does the house have a basement? (yes/no)" value="{{ form_data.get('basement', '') }}" required> -->
     
-                <label for="flield5">Number of field5:</label>
-                <input type="number" id="field5" name="field5" placeholder="Field 1" value="{{ form_data.get('field5', '') }}" required>
+                <label for="hotwaterheating">Water Heating:</label>
+                <select id="hotwaterheating" name="hotwaterheating">
+                    {% set selected_value = form_data.get('hotwaterheating', '1') %}
+                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select>
+                <!-- <input type="number" id="hotwaterheating" name="hotwaterheating" placeholder="Does the house have hot water heating? (yes/no)" value="{{ form_data.get('hotwaterheating', '') }}" required> -->
     
-                <label for="flield6">Number of field6:</label>
-                <input type="number" id="field6" name="field6" placeholder="Field 1" value="{{ form_data.get('field6', '') }}" required>
+                <label for="airconditioning">Air Conditioning:</label>
+                <select id="airconditioning" name="airconditioning">
+                    {% set selected_value = form_data.get('airconditioning', '1') %}
+                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select>
+                <!-- <input type="number" id="airconditioning" name="airconditioning" placeholder="Does the house have air conditioning? (yes/no)" value="{{ form_data.get('airconditioning', '') }}" required> -->
     
-                <label for="flield7">Number of field7:</label>
-                <input type="number" id="field7" name="field7" placeholder="Field 1" value="{{ form_data.get('field7', '') }}" required>
-    
-                <label for="flield8">Number of field8:</label>
-                <input type="number" id="field8" name="field8" placeholder="Field 1" value="{{ form_data.get('field8', '') }}" required>
+                <label for="parking">Parking:</label>
+                <!-- <select id="parking" name="parking">
+                    {% set selected_value = form_data.get('parking', '1') %}
+                    <option value="Yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="No" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select> -->
+                <input type="number" id="parking" name="parking" placeholder="Enter the number of parking spaces" value="{{ form_data.get('parking', '') }}" required>
                 
+                <label for="prefarea">Preferred Area:</label>
+                <select id="prefarea" name="prefarea">
+                    {% set selected_value = form_data.get('prefarea', '1') %}
+                    <option value="yes" {% if selected_value == 'Yes' %}selected{% endif %}>Yes</option>
+                    <option value="no" {% if selected_value == 'No' %}selected{% endif %}>No</option>
+                </select>
+                <!-- <input type="number" id="prefarea" name="prefarea" placeholder="Is the house in a preferred area? (yes/no)" value="{{ form_data.get('prefarea', '') }}" required> -->
+
+                <label for="furnishingstatus">Furnishing:</label>
+                <select id="furnishingstatus" name="furnishingstatus">
+                    {% set selected_value = form_data.get('furnishingstatus', '1') %}
+                    <option value="furnished" {% if selected_value == 'furnished' %}selected{% endif %}>furnished</option>
+                    <option value="semi-furnished" {% if selected_value == 'semi-furnished' %}selected{% endif %}>semi-furnished</option>
+                    <option value="unfurnished" {% if selected_value == 'unfurnished' %}selected{% endif %}>unfurnished</option>
+                </select>
+                <!-- <input type="number" id="furnishingstatus" name="furnishingstatus" placeholder="Enter the furnishing status (furnished/semi-furnished/unfurnished)" value="{{ form_data.get('furnishingstatus', '') }}" required> -->
                 
                 <!-- Dropdown list -->
-                <label for="dropdown_field9">Number of field9:</label>
+                <!-- <label for="dropdown_field9">Number of field9:</label>
                 <select id="dropdown_field9" name="dropdown_field">
                     {% set selected_value = form_data.get('dropdown_field', '1') %}
                     <option value="1" {% if selected_value == '1' %}selected{% endif %}>1</option>
@@ -59,7 +104,9 @@
                     <option value="3" {% if selected_value == '3' %}selected{% endif %}>3</option>
                     <option value="4" {% if selected_value == '4' %}selected{% endif %}>4</option>
                     <option value="5" {% if selected_value == '5' %}selected{% endif %}>5</option>
-                </select>
+                </select> -->
+
+                
                 
             
                 <button id='estimate_button' type="submit">Estimate Price</button>
