@@ -108,36 +108,38 @@
             <img src="{{ url_for('static', filename='visualizations/output2.jpg') }}" alt="Area vs. Price">
             <p><h3>A scatter plot of 'Area vs. Price' suggests a correlation between a property’s size and its price. Larger properties tend to command higher prices, illustrating the premium placed on space.</h3></p>
         
-            <h2>Bedrooms vs. Price</h2>
-            <p>The 'Bedrooms vs. Price' scatter plot reveals a positive correlation between the number of bedrooms and the price of a property. This is intuitive as larger properties tend to have more bedrooms, and thus, command higher prices.</p>
+            <h2>Impact of Bedroom Count on Property Value</h2>
             <img src="{{ url_for('static', filename='visualizations/output3.jpg') }}" alt="Bedrooms vs. Price">
+            <p><h3>The 'Bedrooms vs. Price' box plot reveals a positive correlation between the number of bedrooms and the price of a property. This is intuitive as larger properties tend to have more bedrooms, and thus, command higher prices.</h3></p>
         
-            <h2>Distribution of Furnishing Status</h2>
-            <p>With the 'Distribution of Furnishing Status' pie chart, we see the proportion of furnished, semi-furnished, and unfurnished properties, providing insights into market preferences and potential value additions.</p>
+            <h2>Proportions of Furnishing Styles in the Property Market</h2>
             <img src="{{ url_for('static', filename='visualizations/output4.jpg') }}" alt="Distribution of Furnishing Status">
+            <p><h3>With the 'Distribution of Furnishing Status' pie chart, we see the proportion of furnished, semi-furnished, and unfurnished properties, providing insights into market preferences and potential value additions.</h3></p>
         
-            <h2>Correlation Heatmap</h2>
-            <p>The 'Correlation Heatmap' provides a visual representation of the correlation between the various features of the dataset. The darker the shade of red, the stronger the positive correlation between the two features. The darker the shade of blue, the stronger the negative correlation between the two features. The lighter the shade of red or blue, the weaker the correlation between the two features.</p>
+            <h2>Interrelationship of Housing Features</h2>
             <img src="{{ url_for('static', filename='visualizations/output5.jpg') }}" alt="Correlation Heatmap">
+            <p><h3>The 'Correlation Heatmap' demonstrates the interdependence of various housing features and their collective impact on pricing, an essential consideration for both sellers and buyers.</h3></p>
         
-            <h2>Average Price by Bedrooms and Furnishing Status</h2>
-            <p>The 'Average Price by Bedrooms and Furnishing Status' bar chart provides insights into the average price of properties based on the number of bedrooms and their furnishing status. The chart reveals that furnished properties command a premium over semi-furnished and unfurnished properties. Furthermore, the average price of properties increases with the number of bedrooms.</p>
+            <h2>Comparative Analysis of Pricing by Bedroom Count and Furnishing Status</h2>
             <img src="{{ url_for('static', filename='visualizations/output6.jpg') }}" alt="Average Price by Bedrooms and Furnishing Status">
+            <p><h3>The 'Average Price by Bedrooms and Furnishing Status' bar chart provides insights into the average price of properties based on the number of bedrooms and their furnishing status. The chart reveals that furnished properties command a premium over semi-furnished and unfurnished properties. Furthermore, the average price of properties increases with the number of bedrooms.</h3></p>
         
-            <h2>Area vs. Price by Stories</h2>
-            <p>The 'Area vs. Price by Stories' scatter plot provides insights into the relationship between the size of a property and its price, based on the number of stories. The plot reveals that the price of properties increases with the number of stories, indicating a premium placed on vertical space.</p>
+            <h2>Area and Price by Stories</h2>
             <img src="{{ url_for('static', filename='visualizations/output8.jpg') }}" alt="Area vs. Price by Stories">
+            <p><h3>The 'Area vs. Price by Stories' scatter plot provides insights into the relationship between the size of a property and its price, based on the number of stories. The plot reveals that the price of properties increases with the number of stories, indicating a premium placed on vertical space.</h3></p>
         
-            <h2>Model Accuracies</h2>
-            <p>The 'Model Accuracies' bar chart provides a comparison of the accuracies of the various models employed in the project. Notably, Ridge Regression outperforms both Linear and Lasso Regression. This superiority is attributed to Ridge's regularization approach that manages multicollinearity within predictors, a common characteristic in real estate data. Unlike Lasso, which eliminates some variables altogether, Ridge moderates the influence of all features, retaining their presence in the model. This characteristic is particularly beneficial for datasets where every variable adds some value to the prediction. Ridge Regression's leading accuracy score is indicative of its balanced approach, effectively addressing the bias-variance trade-off, thus ensuring reliable and generalizable predictions. This makes it the model of choice for our housing price prediction, as it delivers a nuanced understanding of the impact of various factors on property values.</p>
+            <h2>Predictive Model Performance</h2>
             <img src="{{ url_for('static', filename='visualizations/output9.jpg') }}" alt="Model Accuracies">
+            <p><h3>The 'Model Accuracies' bar chart provides a comparison of the accuracies of the various models employed in the project. Notably, Ridge Regression outperforms both Linear and Lasso Regression. 
+                This superiority is attributed to Ridge's regularization approach that manages multicollinearity within predictors, a common characteristic in real estate data. Unlike Lasso, which eliminates some variables altogether, Ridge moderates the influence of all features, retaining their presence in the model. 
+                This characteristic is particularly beneficial for datasets where every variable adds some value to the prediction. Ridge Regression's leading accuracy score is indicative of its balanced approach, effectively addressing the bias-variance trade-off, thus ensuring reliable and generalizable predictions. 
+                This makes it the model of choice for our housing price prediction, as it delivers a nuanced understanding of the impact of various factors on property values.</h3></p>
 
-            <h2>Comparison of Model Errors</h2>
-            <p>The graph presented here displays a comparison of mean absolute errors across a spectrum of regression models. The metric showcased, mean absolute error (MAE), serves as a gauge of prediction accuracy, with lower values indicating more precise predictions.
-                Our analysis reveals Ridge Regression as the model with the lowest error, underscoring its efficiency in predicting housing prices with minimal deviation from actual values. Contrasting with alternatives like Linear and Lasso Regression, Ridge demonstrates a superior ability to deliver predictions that closely align with the observed data. This precision is crucial in the real estate domain, where accurate price forecasts are indispensable for both buyers and sellers.
-                The graph succinctly captures the essence of predictive accuracy in the context of real estate pricing, guiding our choice of Ridge Regression as the optimal tool for our analytic arsenal.</p>
+            <h2>Error Analysis</h2>
             <img src="{{ url_for('static', filename='visualizations/output10.jpg') }}" alt="Comparison of Model Errors">
-    
+            <p><h3>The graph presented here displays a comparison of mean absolute errors across a spectrum of regression models. The metric showcased, mean absolute error (MAE), serves as a gauge of prediction accuracy, with lower values indicating more precise predictions.
+                Our analysis reveals Ridge Regression as the model with the lowest error, underscoring its efficiency in predicting housing prices with minimal deviation from actual values. Contrasting with alternatives like Linear and Lasso Regression, Ridge demonstrates a superior ability to deliver predictions that closely align with the observed data. This precision is crucial in the real estate domain, where accurate price forecasts are indispensable for both buyers and sellers.
+                The graph succinctly captures the essence of predictive accuracy in the context of real estate pricing, guiding our choice of Ridge Regression as the optimal tool for our analytic arsenal.</h3></p>
         </div>
     </div>
 
