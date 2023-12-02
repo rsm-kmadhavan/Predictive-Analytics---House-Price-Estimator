@@ -15,8 +15,8 @@ def index():
         # Format the price
     return render_template('index.html', estimated_price=estimated_price, form_data=form_data)
 
-def calculate_price(form_data):
 
+def calculate_price(form_data):
     user_inputs = pd.DataFrame({
         'area': [form_data['area']],
         'bedrooms': [form_data['bedrooms']],
@@ -33,17 +33,14 @@ def calculate_price(form_data):
     })
     try:
         output = model.predict(user_inputs)[0]
+        if output<0:
+            output = 0
         # print(user_inputs)
         return "${:,.0f}".format(output)
     except:
         return 'There was an error processing your request'
 
 
-
-def show_visualisations():
-    # Generate or retrieve your visualization HTML component
-    visualization_html = your_visualization_function()
-    return render_template('visualizations.html', visualization_html=visualization_html)
 
 
 def index_controller():    
