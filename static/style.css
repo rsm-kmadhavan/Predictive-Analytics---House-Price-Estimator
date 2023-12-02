@@ -78,6 +78,7 @@ label {
     font-size: 16px; /* Sets the font size */
     font-weight: bold; /* Makes the label text bold */
     margin-top: 20px;
+    font-size: 20px;
     /* text-align: right; */
 }
 
@@ -109,7 +110,7 @@ input[type="number"], select {
     padding: 10px;
     border: 2px solid #007bff; /* Blue border */
     border-radius: 5px; /* Rounded borders for the input fields */
-    font-size: 16px;
+    font-size: 18px;
     max-width: 100%; /* Prevent overflow */
     box-sizing: border-box; /* Include padding and borders in width */
     text-align: center;
