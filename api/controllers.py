@@ -15,8 +15,8 @@ def index():
         # Format the price
     return render_template('index.html', estimated_price=estimated_price, form_data=form_data)
 
-
 def calculate_price(form_data):
+
     user_inputs = pd.DataFrame({
         'area': [form_data['area']],
         'bedrooms': [form_data['bedrooms']],
@@ -39,8 +39,6 @@ def calculate_price(form_data):
         return "${:,.0f}".format(output)
     except:
         return 'There was an error processing your request'
-
-
 
 
 def index_controller():    
