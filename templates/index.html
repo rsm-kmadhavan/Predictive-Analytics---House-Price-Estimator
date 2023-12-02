@@ -30,7 +30,7 @@
                 <label for="stories">Stories:</label>
                 <input type="number" id="stories" name="stories" placeholder="Number of Stories" value="{{ form_data.get('stories', '') }}" required>
     
-                <label for="mainroad">Location:</label>
+                <label for="mainroad">Near Main Road?:</label>
                 <select id="mainroad" name="mainroad">
                     <option value="yes" {% if form_data.mainroad == 'yes' %}selected{% endif %}>Yes</option>
                     <option value="no" {% if form_data.mainroad == 'no' %}selected{% endif %}>No</option>
@@ -68,7 +68,7 @@
                 <label for="parking">Parking:</label>
                 <input type="number" id="parking" name="parking" placeholder="Enter the number of parking spaces" value="{{ form_data.get('parking', '') }}" required>
                 
-                <label for="prefarea">Preferred Area:</label>
+                <label for="prefarea">In a Preferred Area?:</label>
                 <select id="prefarea" name="prefarea">
                     <option value="yes" {% if form_data.prefarea == 'yes' %}selected{% endif %}>Yes</option>
                     <option value="no" {% if form_data.prefarea == 'no' %}selected{% endif %}>No</option>
