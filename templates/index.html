@@ -89,7 +89,7 @@
     
             <div id="estimated_price">
                 {% if estimated_price %}
-                    <p>Estimated Price: {{ estimated_price }}</p>
+                    <h1>Estimated Price: {{ estimated_price }}</h1>
                 {% endif %}
             </div>
         </div>
@@ -163,16 +163,17 @@
         // Get the element with id="defaultOpen" and click on it to open the default tab
         document.getElementById("defaultOpen").click();
 
-        document.getElementById('estimate_button').addEventListener('click', function() {
-            // Add happiness effect - change color to a brighter one
-            this.style.backgroundColor = '#00ff00'; // Bright green for happiness
-            setTimeout(() => {
-                this.style.backgroundColor = '#ffa500'; // Change it back to orange
-            }, 500);
 
-            let price = document.getElementById('estimated_price').textContent;
-            document.getElementById('estimated_price').textContent = price;
-        });
+        // document.getElementById('estimate_button').addEventListener('click', function() {
+        //     // Add happiness effect - change color to a brighter one
+        //     this.style.backgroundColor = '#00ff00'; // Bright green for happiness
+        //     setTimeout(() => {
+        //         this.style.backgroundColor = '#ffa500'; // Change it back to orange
+        //     }, 5000);
+
+        //     let price = document.getElementById('estimated_price').textContent;
+        //     document.getElementById('estimated_price').textContent = price;
+        // });
 
         // When the user scrolls the page, execute myFunction
         window.onscroll = function() {stickyScroll()};
@@ -191,7 +192,20 @@
             navbar.classList.remove("sticky");
         }
         }
-
     </script>
+
+<footer>
+    <div class="footer-content">
+        <a href="https://github.com/rsm-mrarora/largeDataFinalProject" target="_blank">
+            <img src="{{ url_for('static', filename='github_logo.png') }}" alt="GitHub" />
+            GitHub
+        </a>
+        <a href="mailto:mrarora@ucsd.edu">
+            <img src="{{ url_for('static', filename='gmail_logo.png') }}" alt="GitHub" />
+            Email
+        </a>
+        <p>&copy; 2023 Mridul Arora, Kaushik Madahavan, Saanya Jain, Alvin She</p>
+    </div>
+</footer>
 </body>
 </html>

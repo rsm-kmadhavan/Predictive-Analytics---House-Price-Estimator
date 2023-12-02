@@ -134,3 +134,30 @@ form #estimate_button {
   .sticky + .content {
     padding-top: 60px;
   }
+
+  footer {
+    background-color: #2f2fa2; /* Adjust the color to match your site's theme */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content img {
+    width: 20px; /* Adjust as needed */
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
