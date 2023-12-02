@@ -78,6 +78,7 @@ label {
     font-size: 16px; /* Sets the font size */
     font-weight: bold; /* Makes the label text bold */
     margin-top: 20px;
+    /* text-align: right; */
 }
 
 /* Style for labels above input fields */
@@ -111,6 +112,7 @@ input[type="number"], select {
     font-size: 16px;
     max-width: 100%; /* Prevent overflow */
     box-sizing: border-box; /* Include padding and borders in width */
+    text-align: center;
 }
 
 /* Style the dropdown */
@@ -159,7 +161,7 @@ form #estimate_button {
 #first_heading {
     font-size: 24px;
     color: #007bff;
-    text-shadow: 5px 5px 5px #ddd8d8;
+    text-shadow: 2px 2px 2px #ddd8d8;
     }
 
 .sticky {
