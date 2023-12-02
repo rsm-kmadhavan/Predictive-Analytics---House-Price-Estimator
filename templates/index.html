@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Analysis Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='logo_32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='logo_16.png') }}">
 </head>
 <body>
     <div id="navbarcustom" class="navbar">
@@ -15,7 +17,7 @@
 
     <div id="home" class="tabContent">
         <div class="container">
-            <h1>House Price Estimator</h1>
+            <div id="first_heading"><h1 >House Price Estimator</h1></div>
             <form action="{{ url_for('url_register.index') }}" method="post">
     
                 <label for="area">Area:</label>

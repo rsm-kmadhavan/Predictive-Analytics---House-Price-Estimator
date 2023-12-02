@@ -53,6 +53,7 @@
     background: #fff; /* White background for the container */
     text-align: center;
     margin-top:60px;
+    margin-bottom: 120px;
 }
 
 /* Remove redundant flex display from the body */
@@ -61,15 +62,45 @@ body {
     background-color: #f4f4f4; /* Light grey background for the body */
     margin: 0;
     padding: 0;
-    /* margin-top: 60px; */
 }
 /* General form styling */
 form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
-    gap: 10px; /* Spacing between fields */
-    margin-bottom: 20px;
-  
+    grid-template-columns: repeat(4, 1fr); /* 2 columns layout */
+    gap: 20px; /* Spacing between fields */
+    margin-bottom: 30px;
+}
+
+label {
+    display: block; /* Makes the label take up the full width available */
+    margin-bottom: 8px; /* Adds space below each label */
+    color: #333; /* Sets the text color */
+    font-size: 16px; /* Sets the font size */
+    font-weight: bold; /* Makes the label text bold */
+    margin-top: 20px;
+}
+
+/* Style for labels above input fields */
+input[type="text"] + label,
+input[type="email"] + label,
+input[type="number"] + label,
+select + label {
+    margin-top: 20px; /* Adds space above the label */
+}
+
+/* Adjusting label width for form alignment */
+.form-row label {
+    width: 25%; /* Adjust as needed */
+    float: left; /* Aligns label to the left */
+    text-align: right; /* Aligns label text to the right */
+    margin-right: 10px; /* Space between label and input field */
+}
+
+/* Clearfix for floated labels */
+.form-row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 input[type="number"], select {
@@ -101,7 +132,7 @@ input[type="number"] {
 
 /* Button styling */
 form #estimate_button {
-    grid-column: span 2 !important; /* Make button span two columns */
+    grid-column: span 4 !important; /* Make button span two columns */
     padding: 10px 30px !important; /* Further increased padding for an even bigger button */
     font-size: 22px !important; /* Larger font size */
     background-color: #f64c72 !important; /* Orange background */
@@ -110,7 +141,8 @@ form #estimate_button {
     border-radius: 5px !important;
     cursor: pointer !important;
     transition: transform 0.2s ease-in-out !important; /* Smooth transform transition */
-    margin: auto !important; /* Center the button */
+    margin: auto !important; /*Center the button*/
+    /* margin-top: 60px; */
 }
 
 #estimate_button:hover {
@@ -121,8 +153,14 @@ form #estimate_button {
 #estimated_price {
     font-size: 24px;
     color: #007bff;
-    margin-top: 20px;
+    margin-top: 40px;
 }
+
+#first_heading {
+    font-size: 24px;
+    color: #007bff;
+    text-shadow: 5px 5px 5px #ddd8d8;
+    }
 
 .sticky {
     position: fixed;
@@ -143,6 +181,7 @@ form #estimate_button {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
 
 .footer-content a {
@@ -156,7 +195,7 @@ form #estimate_button {
 }
 
 .footer-content img {
-    width: 20px; /* Adjust as needed */
+    width: 30px; /* Adjust as needed */
     vertical-align: middle;
     margin-right: 5px;
 }
