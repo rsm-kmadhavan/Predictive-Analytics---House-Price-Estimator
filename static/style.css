@@ -164,6 +164,16 @@ form #estimate_button {
     text-shadow: 2px 2px 2px #ddd8d8;
     }
 
+#about_section {
+    font-size: 20px;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+    } 
+
+
 .sticky {
     position: fixed;
     top: 0;

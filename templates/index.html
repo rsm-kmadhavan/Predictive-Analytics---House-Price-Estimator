@@ -13,6 +13,7 @@
         <a href="#home" id="defaultOpen" onclick="openTab(event, 'home')">Home</a>
         <a href="#visualizations" onclick="openTab(event, 'visualizations')">Visualizations</a>
         <a href="#code" onclick="openTab(event, 'code')">Code</a>
+        <a href="#about" onclick="openTab(event, 'about')">About</a>
     </div>
 
     <div id="home" class="tabContent">
@@ -138,6 +139,73 @@
         </div>
     </div>
 
+    <div id="about" class="tabContent">
+        <div class="container">
+                
+                
+                
+
+               
+                
+            <div id="about_section">
+                <h1>Contributors</h1>
+                <h2> Group D MGTA 452 Fall 2023</h2>
+                <ol>
+                    <li>Mridul Arora</li>
+                    <li>Kaushik Madhavan</li>
+                    <li>Saanya Jain</li>
+                    <li>Alvin She</li>
+                </ol>
+
+                
+                    <h1 class="title">About This Website</h1>
+                    <hr>
+
+
+                <p><img src="{{ url_for('static', filename='about_1.jpeg') }}" align="right" height="200" width="200" hspace="20"> This website has been meticulously crafted as an integral part of our final project for the course MGTA 452, titled "Collecting and Analyzing Large Data." The primary focus of our project lies in the realm of real estate, particularly in the prediction of house prices. We undertake this through a comprehensive analysis of historical data, employing a variety of predictive models. The goal is to assess the effectiveness of these models meticulously and select the one that demonstrates the highest accuracy in predicting house prices.</p>
+                <p>The site is thoughtfully divided into four well-defined sections, each serving a unique purpose. In the first section, users are greeted with an innovative estimator tool. This tool leverages a sophisticated model that we have carefully developed and refined. It enables users to input specific characteristics of a house and receive an estimated market price, reflecting the practical application of our project's findings. The second section delves deeper into the methodologies behind our project. Here, we discuss the analytical procedures and strategies employed in the quest to develop and select the most efficient predictive model for house price estimation.</p>
+                <p>Moving to the third section, it offers a detailed exposition of the Python programming language code that has been instrumental in both the analysis and the construction of the predictive model. This section aims to provide transparency and understanding of the technical underpinnings of our project. Lastly, the section you are currently navigating is dedicated to the frontend aspect of this website. It offers insights into the design and development process of the website itself, showcasing the interface through which users interact with our project's findings and tools. This holistic structure of the website not only presents our project in a comprehensive manner but also enhances user engagement by providing a seamless and informative experience.</p>
+
+                
+                <h2>How does this website work?</h2>
+                <p>To understand this, we will have to get familiar with the following critical components:</p>
+
+                <h3>1.  Predictive Model</h3>   
+                <p>The task at hand involves the development of a predictive model, which is then required to be serialized and stored in the form of a pickle file. For a comprehensive understanding of the model's construction process, one can refer to the code tab available on this website. The specific model employed for this purpose is the Ridge Regression model, which is a part of the sklearn package, a widely used library in the field of machine learning.</p>
+                <p>Ridge Regression, in essence, is an evolved version of the Ordinary Least Squares (OLS) regression. The primary distinction lies in the application of L2 regularization to the model's coefficients. This regularization technique involves adding a penalty equivalent to the square of the magnitude of the coefficients. The primary advantage of this approach is its effectiveness in mitigating the problem of overfitting. Overfitting occurs when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. By applying L2 regularization, Ridge Regression ensures that the model does not become overly complex or sensitive to the specific nuances of the training data.</p>
+                <p>Furthermore, this regularization technique contributes to enhancing the model's simplicity and accuracy, particularly when it comes to making predictions on data that the model has not previously encountered, also known as 'held out' data. Simplicity in a model is desirable as it typically leads to better generalization, meaning the model will perform better on new, unseen data. The balance between fitting the training data well, while also maintaining simplicity to perform effectively on new data, is a key aspect of building a robust predictive model.</p>
+
+                <h3>2. Flask</h3>
+                <p>Flask is a Python-based web framework that allows for the development of web applications. It is a lightweight framework that is easy to learn and implement. Flask is used to create a web application that can be accessed by users. The web application is hosted on a server, which is a computer that is connected to the internet and is always on. The server is responsible for running the web application and responding to requests from users. The server is also responsible for storing the predictive model and making predictions based on the model.</p>
+
+
+                <h3>3. HTML</h3>
+                <p>HTML is a markup language that is used to create web pages. HTML is used to create the structure of the web page. It is used to define the content of the web page, such as text, images, and links. HTML is also used to define the layout of the web page, such as the position of the content on the page. HTML is used to create the web page that is displayed to the user.</p>
+
+                <h3>4. CSS</h3>
+                <p>CSS is a style sheet language that is used to define the style of the web page. CSS is used to define the appearance of the web page, such as the color, font, and size of the text. CSS is also used to define the layout of the web page, such as the position of the content on the page. CSS is used to style the web page that is displayed to the user.</p>
+
+                <h3>5. JavaScript</h3>
+                <p>JavaScript is a programming language that is used to create interactive web pages. JavaScript is used to add interactivity to the web page, such as responding to user input. JavaScript is also used to add functionality to the web page, such as making requests to the server. JavaScript is used to add interactivity and functionality to the web page that is displayed to the user.</p>
+
+                <h3>6. Host</h3>
+                <p>The web application is hosted on a server, which is a computer that is connected to the internet and is always on. The server is responsible for running the web application and responding to requests from users. The server is also responsible for storing the predictive model and making predictions based on the model.</p>
+
+                <h2>Where is the code located?</h2>
+
+                <p>The whole code for this website has been stored in a github repository from which the histing website takes a pull for the latest commit and deploys the web application. The repository has been made public and can be accessed here: <a href="https://github.com/rsm-mrarora/largeDataFinalProject" target="_blank">GitHub</a></p>
+
+
+                </div>
+                
+
+        
+
+                
+                
+        </div>
+    </div>
+
     <script>
         // JavaScript for handling tab switching
         function openTab(evt, tabName) {
@@ -165,17 +233,6 @@
         // Get the element with id="defaultOpen" and click on it to open the default tab
         document.getElementById("defaultOpen").click();
 
-
-        // document.getElementById('estimate_button').addEventListener('click', function() {
-        //     // Add happiness effect - change color to a brighter one
-        //     this.style.backgroundColor = '#00ff00'; // Bright green for happiness
-        //     setTimeout(() => {
-        //         this.style.backgroundColor = '#ffa500'; // Change it back to orange
-        //     }, 5000);
-
-        //     let price = document.getElementById('estimated_price').textContent;
-        //     document.getElementById('estimated_price').textContent = price;
-        // });
 
         // When the user scrolls the page, execute myFunction
         window.onscroll = function() {stickyScroll()};
