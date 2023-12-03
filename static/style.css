@@ -79,7 +79,7 @@ label {
     font-weight: bold; /* Makes the label text bold */
     margin-top: 20px;
     font-size: 20px;
-    /* text-align: right; */
+    /* text-align: left; */
 }
 
 /* Style for labels above input fields */
@@ -173,6 +173,20 @@ form #estimate_button {
     margin-left: 100px;
     margin-right: 100px;
     } 
+
+ #analysis_section {
+        font-size: 20px;
+        color: #000000;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: justify;
+        margin-left: 100px;
+        margin-right: 100px;
+        } 
+
+#analysis_section img {
+            display: block;
+            margin: 0 auto;
+          }
 
 
 .sticky {
