@@ -191,14 +191,14 @@
 
                         
                         <h4>Significant Predictors</h4>
-                        <img src="{{ url_for('static', filename='visualizations/output10.png') }}" width=50% alt="Predictors">
+                        <img src="{{ url_for('static', filename='visualizations/output12.png') }}" width=50% alt="Predictors">
                         <p>These coefficients indicate the strength and direction (positive or negative) of the relationship between each feature and the target variable (price).
                             The coefficients for "Hot Water Heating" are the largest in magnitude, suggesting that this feature has the most drastic impact on price. Specifically, having hot water heating ('yes') is associated with a significant increase in price, while not having it ('no') is associated with a decrease.The positive coefficient for 'Area' indicates that larger areas are associated with higher prices. Similarly, a greater number of bathrooms also tends to increase the house price.
                         </p>
 
 
                         <h4>Predictive Model Performance</h4>
-                        <img src="{{ url_for('static', filename='visualizations/output9.jpg') }}" width=50% alt="Model Accuracies">
+                        <img src="{{ url_for('static', filename='visualizations/output13.png') }}" width=50% alt="Model Accuracies">
                         <p>The 'Model Accuracies' bar chart provides a comparison of the accuracies of the various models employed in the project. Notably, Ridge Regression outperforms both Linear and Lasso Regression. 
                             This superiority is attributed to Ridge's regularization approach that manages multicollinearity within predictors, a common characteristic in real estate data. Unlike Lasso, which eliminates some variables altogether, Ridge moderates the influence of all features, retaining their presence in the model. 
                             This characteristic is particularly beneficial for datasets where every variable adds some value to the prediction. Ridge Regression's leading accuracy score is indicative of its balanced approach, effectively addressing the bias-variance trade-off, thus ensuring reliable and generalizable predictions. 
