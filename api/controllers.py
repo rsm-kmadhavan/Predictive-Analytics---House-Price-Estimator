@@ -2,7 +2,7 @@ from flask import request, render_template
 
 import pandas as pd
 import joblib as pkl
-model = pkl.load('assets/rr_model.pkl')
+model = pkl.load('assets/rr_model1.pkl')
 
 def index():
     estimated_price = None
